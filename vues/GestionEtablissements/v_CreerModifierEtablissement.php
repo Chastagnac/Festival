@@ -4,7 +4,7 @@
 ?>
 <form method="POST" action="?uc=gestEtabs&action=<?= $action ?>">
     <br>
-    <table width="85%" cellspacing="0" cellpadding="0" class="tabNonQuadrille">
+    <table width="8%" cellspacing="0" cellpadding="0" class="tabNonQuadrille">
 
         <tr class="enTeteTabNonQuad">
             <td colspan="3"><strong><?= $message ?></strong></td>

@@ -27,5 +27,8 @@ switch ($uc) {
     case 'attribChambres':
         include './controleurs/c_AttributionChambres.php';
         break;
+    case 'envoiMail':
+        include './controleurs/c_EnvoiMail.php';
+        break;
 }
 require 'vues/v_fin.inc.php';
