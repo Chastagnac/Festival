@@ -530,4 +530,23 @@ class PdoFestival
         $res = $requetePrepare->fetch(PDO::FETCH_OBJ);
         return ($res) ? $res->nombreChambres : 0;
     }
+    
+    
+    // Permet de creer un groupe, retourne le nom l'id reponsable, adrs, nbpersonnes, nompays, herbergement oui/non, mail;
+    public function creerGroupe($id, $nom, $identiteResponsable,$adressePostale ,$nombrePersonnes ,$nomPays ,$hebergement, $mail)
+    {
+        $requetePrepare = PdoFestival::$monPdo->prepare(
+            'INSERT INTO groupe '
+            . 'VALUES(unNomGroupe,:unIdResponsable,:unAdresseResponsable,: unNombrePersonnes,: unNomPays,: unHerbergement,: unMailGroupe)'
+        );
+        $requetePrepare->bindParam(':unNomGroupe', $nom, PDO::PARAM_STR);
+	$requetePrepare->bindParam(':unIdResponsable', $identiteResponsable, PDO::PARAM_STR);
+	$requetePrepare->bindParam(':unAdresseResponsable', $adressePostale, PDO::PARAM_STR);
+	$requetePrepare->bindParam(':unNombrePersonnes', $nombrePersonnes, PDO::PARAM_STR);
+	$requetePrepare->bindParam(':unNomPays', $nomPays, PDO::PARAM_STR);
+	$requetePrepare->bindParam(':unHerbergement', $hebergement, PDO::PARAM_STR);
+	$requetePrepare->bindParam(':unMailGroupe', $mail, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        return $requetePrepare->fetchAll();
+    }
 }
