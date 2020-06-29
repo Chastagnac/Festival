@@ -30,5 +30,8 @@ switch ($uc) {
     case 'envoiMail':
         include './controleurs/c_EnvoiMail.php';
         break;
+    case 'creerGroupe':
+        include './controleurs/c_CreerGroupe.php';
+        break;
 }
 require 'vues/v_fin.inc.php';

@@ -32,6 +32,7 @@
                             <?php construireMenu('Offre hébergement', 'index.php?uc=offreHeberge', 4); ?>
                             <?php construireMenu('Attribution chambres', 'index.php?uc=attribChambres', 5); ?>
                             <?php construireMenu('Envoi de mails', 'index.php?uc=envoiMail', 6); ?>
+                            <?php construireMenu('Créer un groupe', 'index.php?uc=creerGroupe', 6); ?>
                         </ul>
                     </div>
 
