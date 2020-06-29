@@ -533,7 +533,7 @@ class PdoFestival
     
     
     // Permet de creer un groupe, retourne le nom l'id reponsable, adrs, nbpersonnes, nompays, herbergement oui/non, mail;
-    public function creerGroupe($id, $nom, $identiteResponsable,$adressePostale ,$nombrePersonnes ,$nomPays ,$hebergement, $mail)
+    public function creerGroupe($nom, $identiteResponsable,$adressePostale ,$nombrePersonnes ,$nomPays ,$hebergement, $mail)
     {
         $requetePrepare = PdoFestival::$monPdo->prepare(
             'INSERT INTO groupe '

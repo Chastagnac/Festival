@@ -9,7 +9,7 @@ if (empty($action)) {
 
 switch($action){
     case 'initial':
-        $groupe = $pdo->creerGroupe();
+        $creerGroupe = $pdo->creerGroupe();
         include 'vues/CreerGroupe/v_CreerGroupe.php';
         break;
 }

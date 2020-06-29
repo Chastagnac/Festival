@@ -1,14 +1,14 @@
 <?php ?>
-<form action="?uc=envoiMail&action=verifMail" method="POST"
-      <select name="groupe">
-              <?php
-              foreach ($lesGroupes as $unGroupe) {
-                  $idGroupe = $unGroupe['id'];
-                  $nomGroupe = $unGroupe['nom'];
+<form action="?uc=envoiMail&action=verifMail" method="POST">
+    <select name="groupe">
+        <?php
+        foreach ($lesGroupes as $unGroupe) {
+            $idGroupe = $unGroupe['id'];
+            $nomGroupe = $unGroupe['nom'];
 
-                  if ($idGroupe === $leGroupeSelectionne) {
-                      ?>    
-                <option value="<?= $idGroupe ?>"> selected><?= $nomGroupe ?></option>
+            if ($idGroupe === $leGroupeSelectionne) {
+                ?>    
+                <option value="<?= $idGroupe ?>" selected><?= $nomGroupe ?></option>
                 <?php
             } else {
                 ?>

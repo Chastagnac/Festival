@@ -46,7 +46,7 @@
                        maxlength="45"></td>
         </tr>
     </select>
-    <input type="submit" value="Envoyer le formulaire">
+    <input type="submit" value=<?php $creerGroupe ?>>
 </form>
 
 
